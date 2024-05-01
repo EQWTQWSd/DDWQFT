@@ -1,0 +1,60 @@
+/*
+
+  ██████╗░████████╗██╗░░██╗           
+  ██╔══██╗╚══██╔══╝╚██╗██╔╝          
+  ██████╔╝░░░██║░░░░╚███╔╝░          
+  ██╔══██╗░░░██║░░░░██╔██╗░          
+  ██║░░██║░░░██║░░░██╔╝╚██╗          
+  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝          
+
+   
+   # MADE BY RTX!! FEEL FREE TO USE ANY PART OF CODE
+   ## FOR HELP CONTACT ME ON DISCORD
+   ## Contact    [ DISCORD SERVER :  https://discord.gg/KyxUC4h8K6 ]
+   ## YT : https://www.youtube.com/channel/UCFeiE-VP3sEuBeKhJnHdoYw
+*/
+const { ApplicationCommandOptionType } = require('discord.js');
+const db = require("../mongoDB");
+
+module.exports = {
+  name: "owner",
+  description: "Get information about bot owner.",
+  permissions: "0x0000000000000800",
+  options: [],
+
+  run: async (client, interaction) => {
+    try {
+      const youtubeLink = 'https://www.youtube.com/channel/UCFeiE-VP3sEuBeKhJnHdoYw';
+      const InstagramLink = '';
+      const { EmbedBuilder } = require('discord.js')
+        const embed = new EmbedBuilder()
+            .setColor('#f18aff')
+            .setAuthor({
+          name: 'Owner',
+          iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157310253520662638/2443-iconperson.png?ex=651824aa&is=6516d32a&hm=0becc4a0fda01e5a02a63cf098db30c287e60a474f8d2da4ddeae7f47d98a5a3&',
+          url: 'https://discord.gg/FUEHs7RCqz'
+        })
+            .setDescription(`__**About me**__:\n\n ▶️ ขอบคุณที่เข้ามาใช้งาย BOT ของเราผมมีชื่อว่า NO_NAME เป็นเจ้าของ bot ตัวนี้ขอบคุณเป็นอย่างสูงที่เข้ามาใช้ : ❤️ [NO_NAME](${youtubeLink})\n Instagram : 💙 [none](${InstagramLink})`)
+            .setTimestamp();
+      interaction.reply({ embeds: [embed] }).catch(e => {});
+
+    } catch (e) {
+    console.error(e); 
+  }
+  },
+};
+/*
+
+  ██████╗░████████╗██╗░░██╗           
+  ██╔══██╗╚══██╔══╝╚██╗██╔╝          
+  ██████╔╝░░░██║░░░░╚███╔╝░          
+  ██╔══██╗░░░██║░░░░██╔██╗░          
+  ██║░░██║░░░██║░░░██╔╝╚██╗          
+  ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝          
+
+   
+   # MADE BY RTX!! FEEL FREE TO USE ANY PART OF CODE
+   ## FOR HELP CONTACT ME ON DISCORD
+   ## Contact    [ DISCORD SERVER :  https://discord.gg/KyxUC4h8K6 ]
+   ## YT : https://www.youtube.com/channel/UCFeiE-VP3sEuBeKhJnHdoYw
+*/
